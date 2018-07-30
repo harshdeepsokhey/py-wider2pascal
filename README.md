@@ -1,3 +1,3 @@
-# PY-WIDER2PASCAL 
+# py-wider2pascal
 
-Python implementation for generating WIDER Faces dataset in PASCAL VOC format
+Python code for generating WIDER Faces dataset in PASCAL VOC format
