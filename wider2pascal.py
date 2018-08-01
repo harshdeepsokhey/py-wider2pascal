@@ -71,16 +71,16 @@ def generateXML(imgDir, imgName, bboxList, targetName):
 		bbox = ET.SubElement(obj,"bndbox")
 
 		elem = ET.SubElement(bbox, "xmin")
-		elem.text = str(round(xmin))
+		elem.text = str(int(round(xmin)))
 
 		elem = ET.SubElement(bbox, "ymin")
-		elem.text = str(round(ymin))
+		elem.text = str(int(round(ymin)))
 
 		elem = ET.SubElement(bbox, "xmax")
-		elem.text = str(round(xmax))
+		elem.text = str(int(round(xmax)))
 
 		elem = ET.SubElement(bbox, "ymax")
-		elem.text = str(round(ymax))
+		elem.text = str(int(round(ymax)))
 	else:
 		for i in range(len(bboxList)):
 			xmin = bboxList[i][0]
@@ -97,16 +97,16 @@ def generateXML(imgDir, imgName, bboxList, targetName):
 			bbox = ET.SubElement(obj,"bndbox")
 
 			elem = ET.SubElement(bbox, "xmin")
-			elem.text = str(round(xmin))
+			elem.text = str(int(round(xmin)))
 
 			elem = ET.SubElement(bbox, "ymin")
-			elem.text = str(round(ymin))
+			elem.text = str(int(round(ymin)))
 
 			elem = ET.SubElement(bbox, "xmax")
-			elem.text = str(round(xmax))
+			elem.text = str(int(round(xmax)))
 
 			elem = ET.SubElement(bbox, "ymax")
-			elem.text = str(round(ymax))
+			elem.text = str(int(round(ymax)))
 
 	tree = ET.ElementTree(anno)
 	tree.write(targetName)
